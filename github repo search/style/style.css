@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+*{
+    font-family: 'Space mono', monospace;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --primary-colour: #0079FF;
+    --background-colour: #F6F8FF;
+    --content-background: #FEFEFE;
+    --input-placeholder: #4B6A9B;
+    --mode-colour: #697C9A;
+    --number-colour: #2B3442;
+    --text-colour: #222731;
+}
+main{
+    background-color: var(--background-colour);
+    padding: 144px 0;
+}
+
+.container{
+    margin: 0 auto;
+    min-width: 730px;
+    width: 60%;
+}
+
+.logo a, .colour-mode small , .search-bar input[submit]{
+    font-weight: 700;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+}
+
+.logo a, .colour-mode small{
+    color: var(--text-colour);
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 26px;
+}
+
+.colour-mode small::after{
+    content: 'dark';
+}
+.colour-mode small:hover{
+    color: var(--text-colour);
+}
+
+.colour-mode .moon-icon path{
+    fill: var(--text-colour);
+}
+
+.colour-mode small{
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-right: 16px;
+    color: var(--input-placeholder);
+}
+
+.sun-icon{
+    display: none;
+}
+
+.search-bar{
+    margin-bottom: 24px;
+}
+
+.form-container{
+    position: relative;
+}
+
+.search-bar input[type="search"]{
+    width: 100%;
+    padding: 22px 80px 22px;
+    border: none;
+    font-size: 18px;
+    background-color: var(--content-background);
+    color: var(--text-colour);
+}
+
+.search-bar input[type="search"]:focus{
+    outline: none;
+}
+.search-bar input[type="search"]::placeholder{
+    color: var(--input-placeholder);
+    font-size: 18px;
+}
+
+.search-bar img, .search-bar input[type="submit"], .error-message{
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.error-message{
+    color: red;
+    right: 140px;
+    font-weight: 700;
+    display: none;
+}
+
+.search-bar img{
+    left: 32px;
+}
+
+.search-bar input[type="submit"]{
+    right: 10px;
+    border: 0;
+    background-color: var(--primary-colour);
+    color:#fff;
+    padding: 12px 24px;
+    border-radius: 10px;
+}
+
+.search-bar input[type="submit"]:hover{
+    background-color:#60abff ;
+}
+
+.search-bar, .github-user{
+    box-shadow: 0 16px 30px -10px rgba(70, 96, 187, 0.1);
+    background-color: var(--content-background);
+    border-radius: 15px;
+}
+
+/* github user section */
+.github-user{
+    display: flex;
+    justify-content: space-between;
+    padding: 48px;
+}
+
+.profile-img{
+    margin-right: 37px;
+}
+
+.github-user .profile-img img{
+    border-radius: 50%;
+    width: 117px;
+    background-color:#0079FF ;
+}
+.github-profile{
+    width:80%;
+}
+.github-profile .profile{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.github-profile .profile h1{
+    font-size: 26px;
+    display: inline-block;
+}
+
+.github-profile .profile small{
+    font-size: 15px;
+    color: var(--mode-colour);
+    padding: 10px 0;
+    text-align: end;
+}
+.github-profile .profile a{
+    color: var(--primary-colour);
+    text-decoration: none;
+}
+
+.github-profile p{
+    font-size: 15px;
+    margin: 20px 0 32px;
+    color: var(--input-placeholder);
+}
+
+/* data info section */
+
+.github-profile .data-info{
+    background-color: var(--background-colour);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,33.3%);
+    padding:15px 32px;
+    margin-bottom: 37px;
+}
+
+.data-info .data-section small{
+    color: var(--input-placeholder);
+    font-size: 13px;
+}
+
+.data-info .data-section h2{
+    font-size: 22px;
+    line-height: 33px;
+    color: var(--number-colour);
+}
+
+/* social media section */
+.github-profile .social-media{
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+}
+
+.social-media .social-link{
+    margin-bottom: 15px;
+}
+
+.social-link a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.social-link a small{
+    color: var(--input-placeholder);
+    margin-left: 16px;
+}
+
+.not-available{
+    opacity: 0.5;
+}
+
+/* *******************************table mode************************** */
+
+@media(max-width:1000px){
+    .container{
+        min-width: 573px;
+        width: 100%;
+    }
+
+    .github-user{
+        padding: 40px;
+        display: block;
+    }
+
+    .github-user .profile-img{
+        float: left;
+    }
+
+    .github-user .github-profile .profile{
+        height: 117px;
+        position: relative;
+    }
+
+    .github-profile{
+        width: 100%;
+    }
+
+    .github-profile .profile h1, .github-profile .profile a, .github-profile .profile small{
+        position: absolute;
+    }
+
+    .github-profile .profile h1{
+        top: 12px;
+    }
+
+    .github-profile .profile a{
+        top: 51px;
+    }
+    .github-profile .profile small{
+        bottom: 14px;
+        padding: 0;
+    }
+    .github-profile p{
+        margin-top: 24px;
+    }
+}
+
+/* *****************mobile mode********************** */
+
+@media(max-width:640px){
+
+    main{
+        padding-top: 31px;
+    }
+
+    .container{
+        width: 87%;
+        min-width: 327px;
+    }
+}
+
+@media(max-width:500px){
+    header{
+        margin-bottom: 35px;
+    }
+
+    .search-bar input[type='search']{
+        font-size: 13px;
+        padding: 20px 45px;
+    }
+    .search-bar input[type='search']::placeholder, .error-message{
+        font-size: 13px;
+    }
+    .search-bar img{
+        left: 16px;
+        font-size: 13px;
+    }
+    .search-bar input[type='submit']{
+        right: 7px;
+        width: 85px;
+        font-size: 13px;
+        padding: 12px 14px;
+    }
+    .github-user{
+        padding: 32px 24px;
+    }
+    .github-user .profile-img{
+        width: 22%;
+        margin-right: 20px;
+    }
+    .github-user .profile-img img{
+        width: 70px;
+    }
+    .github-user .github-profile .profile{
+        height: 70px;
+    }
+
+    .github-profile .profile h1{
+        top: 1px;
+        font-size: 16px;
+    }
+
+    .github-profile p, .github-profile .profile a, .github-profile .profile small{
+        font-size: 13px;
+    }
+    .github-profile .profile a{
+        top: 25px;
+    }
+    .github-profile .profile small{
+        bottom: 0;
+    }
+    .github-profile p{
+        margin: 33px 0 23px;
+    }
+    .github-user .data-info{
+        padding: 18px 15px;
+    }
+    .github-user .data-info .data-section{
+        text-align: center;
+    }
+    .data-info .data-section small{
+        font-size: 11px;
+        line-height: 17px;
+    }
+
+    .data-info .data-section h2{
+        font-size: 16px;
+    }
+    .github-user .social-media{
+        grid-template-columns: auto;
+    }
+    .social-link a small{
+        margin-left: 13px;
+        font-size: 13px;
+    }
+}
+
+
