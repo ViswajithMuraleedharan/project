@@ -14,6 +14,7 @@ A frontend project built with HTML, CSS, and JavaScript that allows users to sea
 ## Technologies Used
 * HTML
 * CSS
+* Bootstrap
 * JavaScript
 ## APIs Used
 GitHub API
