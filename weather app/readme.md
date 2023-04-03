@@ -14,7 +14,9 @@ Private API
 API key
 
 ## API and API_KEY used is
+### API
 (https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric)
+### API_KEY
 (3265874a2c77ae4a04bb96236a642d2f)
 
 <img src="https://github.com/ViswajithMuraleedharan/project/blob/master/weather%20app/Weather%20App%20-%20Google%20Chrome%2003-04-2023%2010_53_44%20AM.png"/>
